@@ -1,7 +1,8 @@
-import { useState } from "react";
+import {useState} from "react";
 import emailjs from "emailjs-com";
-import { useAlert } from "react-alert";
 import React from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import {ToastContainer, toast} from 'react-toastify';
 
 const initialState = {
   name: "",
@@ -9,33 +10,40 @@ const initialState = {
   message: "",
 };
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
-  const alert = useAlert();
+  const [{name, email, message}, setState] = useState(initialState);
+  // const notify = () => toast("Wow so easy !");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
+    const {name, value} = e.target;
+    setState((prevState) => ({...prevState, [name]: value}));
   };
-  const clearState = () => setState({ ...initialState });
-
+  const clearState = () => setState({...initialState});
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-    alert.show("Success!")
 
-    // emailjs
-    //   .sendForm("service_qdi32t4", "template_7b4fhci", e.target, "owGsC7zMaz4520u5r")
-    //   .then(
-    //     (result) => {
+    // const emailPromise =
+    //   emailjs.sendForm("service_qdi32t4", "template_7b4fhci", e.target, "owGsC7zMaz4520u5r")
+    const emailPromise = new Promise(resolve => setTimeout(resolve, 3000));
+    toast.promise(emailPromise,
+      {
+        pending: 'Sending email...',
+        success: 'Email received!',
+        error: 'Something went wrong'
+      }
+    )
+
+    // .then(
+    //   (result) => {
     //
-    //       console.log(result.text);
-    //       clearState();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    //     console.log(result.text);
+    //     clearState();
+    //   },
+    //   (error) => {
+    //     console.log(error.text);
+    //   }
+    // );
   };
   return (
     <div>
@@ -162,6 +170,10 @@ export const Contact = (props) => {
           </p>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-center"
+      />
+
     </div>
   );
 };
