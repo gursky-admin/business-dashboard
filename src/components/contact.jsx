@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { useAlert } from "react-alert";
 import React from "react";
 
 const initialState = {
@@ -9,31 +10,32 @@ const initialState = {
 };
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
+  const alert = useAlert();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
   const clearState = () => setState({ ...initialState });
-  
-  
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    alert.show("Success!")
+
+    // emailjs
+    //   .sendForm("service_qdi32t4", "template_7b4fhci", e.target, "owGsC7zMaz4520u5r")
+    //   .then(
+    //     (result) => {
+    //
+    //       console.log(result.text);
+    //       clearState();
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
   return (
     <div>
@@ -54,8 +56,8 @@ export const Contact = (props) => {
                     <div className="form-group">
                       <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="from_name"
+                        name="from_name"
                         className="form-control"
                         placeholder="Name"
                         required
@@ -68,8 +70,8 @@ export const Contact = (props) => {
                     <div className="form-group">
                       <input
                         type="email"
-                        id="email"
-                        name="email"
+                        id="from_email"
+                        name="from_email"
                         className="form-control"
                         placeholder="Email"
                         required

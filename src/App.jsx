@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { Features } from "./components/features";
@@ -23,6 +25,11 @@ const App = () => {
     setLandingPageData(JsonData);
   }, []);
 
+    const options = {
+        timeout: 5000,
+        position: positions.BOTTOM_CENTER
+    };
+
   return (
     <div>
       <Navigation />
@@ -33,7 +40,9 @@ const App = () => {
       <Gallery data={landingPageData.Gallery} />
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
-      <Contact data={landingPageData.Contact} />
+      <Provider template={AlertTemplate} {...options}>
+          <Contact data={landingPageData.Contact} />
+      </Provider>
     </div>
   );
 };
