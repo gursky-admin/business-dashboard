@@ -80,6 +80,12 @@ hr {
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
+#menu.header-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 #menu a.navbar-brand {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
@@ -208,8 +214,8 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
-  background-color: #e5e5e5;
+  background: url(../img/sunset.jpg) center center no-repeat;
+  /*background-color: #e5e5e5;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -244,6 +250,13 @@ header .intro-text {
   padding-bottom: 40px;
   text-align: center;
 }
+header .header-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
 /* Features Section */
 #features {
   background: #f6f6f6;
@@ -260,9 +273,12 @@ header .intro-text {
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
+.features-row {
+  padding-bottom: 55px;
+}
 /* About Section */
 #about {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 #about h3 {
   font-size: 22px;
@@ -310,11 +326,21 @@ header .intro-text {
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #284c61 0%, #284c61 100%);
   color: #fff;
 }
 #services .service-desc {
   margin: 10px 10px 20px;
+}
+#services .services-tag {
+  font-size: small;
+  padding-left: 10px;
+  padding-right: 10px;
+  /*border-radius: 10px;*/
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  /*margin-right: 8rem;*/
+  /*box-sizing: border-box;*/
 }
 #services h2 {
   color: #fff;
