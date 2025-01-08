@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { PrimeReactProvider } from 'primereact/api';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <PrimeReactProvider>
+      <App />
+      </PrimeReactProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

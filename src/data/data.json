@@ -86,6 +86,24 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
     }
   ],
+  "Services2": [
+    {
+      "name": "Practice",
+      "text": "My proactive approach to therapy blends humor and a relaxed atmosphere to help you feel at ease. I strive to create a safe environment where you can learn effective coping strategies for life's challenges, identify what may no longer be helpful, and discover ways to reach your goals. Taking the first steps toward change can be daunting, and I’m here to support you in that journey. I believe you are the expert in your own life, and my role is to help you uncover the solutions that already reside within you."
+    },
+    {
+      "name": "Locations",
+      "text": "I only offer virtual appointments at this time to allow easy access to therapy services that fit into your life. Please contact me via my contact form or through Mindful Therapy Group to request an appointment. "
+    },
+    {
+      "name": "Education",
+      "text": "I received my Bachelors of Arts in Psychology, minoring in Sociology and Disaster Studies, from the State University of New York at New Paltz, in the heart of apple county NY. I continued my education at Stony Brook University in the School of Social Welfare to complete my Masters of Social Work. I am a Certified Clinical Anxiety Treatment Professional (CCATP) and continue to seek out training and education to expand my skills and knowledge. "
+    },
+    {
+      "name": "Work Experience",
+      "text": "I have experience providing mental health counseling in a variety of home and medical settings with a spectrum of individuals which has helped me build an electric approach. I began my career at a mental health non-profit providing outreach services to individuals 60+ in their homes, apartments, adult family homes and assisted living facilities. In 2018, I transitioned to providing counseling and case management services for individuals residing in skilled nursing and rehabilitation centers. "
+    }
+  ],
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
@@ -141,33 +159,21 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "location": "Issaquah, WA",
+    "phone": "516.875.1692"
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-video-camera",
+      "title": "Offers Telehealth Appointments"
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-check",
+      "title": "Accepts Insurance"
     },
     {
       "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Accepting New Clients"
     }
   ]
 }
