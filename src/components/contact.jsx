@@ -23,9 +23,9 @@ export const Contact = (props) => {
     e.preventDefault();
     console.log(name, email, message);
 
-    // const emailPromise =
-    //   emailjs.sendForm("service_qdi32t4", "template_7b4fhci", e.target, "owGsC7zMaz4520u5r")
-    const emailPromise = new Promise(resolve => setTimeout(resolve, 3000));
+    const emailPromise =
+      emailjs.sendForm("service_qdi32t4", "template_7b4fhci", e.target, "owGsC7zMaz4520u5r")
+    // const emailPromise = new Promise(resolve => setTimeout(resolve, 3000));
     toast.promise(emailPromise,
       {
         pending: 'Sending email...',
