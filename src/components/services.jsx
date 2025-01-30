@@ -17,7 +17,8 @@ export const Services = (props) => {
                                 {/*<i className={d.icon}></i>*/}
                                 <div className="service-desc">
                                     <h3>{d.name}</h3>
-                                    <p>{d.text}</p>
+                                    <p dangerouslySetInnerHTML={{__html: d.text }} />
+                                    {/*<p>{d.text}</p>*/}
                                 </div>
                             </div>
                         ))
@@ -57,17 +58,21 @@ export const Services = (props) => {
                         <h3>Insurance Accepted</h3>
                     </div>
                     <ul className="approaches">
-                        <li>Premera Blue Cross</li>
+                        <li>Kaiser Northwest Medicare Advantage</li>
                         <li>Kaiser Permanente</li>
-                        <li>Kaiser Permanente NW</li>
-                        <li>United Healthcare</li>
+                        <li>Kaiser Permanente Northwest</li>
+                        <li>Kaiser Washington Medicare Advantage</li>
                         <li>Medicare</li>
+                        <li>Premera Blue Cross</li>
+                        <li>Regence</li>
+                        <li>United Healthcare</li>
+                        <li>United Healthcare EAP</li>
                     </ul>
                     <div className="service-desc">
                         <h3>Fees</h3>
                     </div>
                     <ul className="approaches">
-                        <li>Insurance (Amt based on coverage/benefits): $150</li>
+                        <li>Insurance: Amt based on coverage/benefits</li>
                         <li>Private Pay: $150</li>
                     </ul>
 
